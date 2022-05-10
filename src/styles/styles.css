@@ -10,6 +10,14 @@
   --gray-headline: hsl(210, 11%, 15%);
   --gray-paragraph: hsl(210, 9%, 31%);
   --white: hsl(0, 0%, 100%);
+
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 
 /* ====== Nav ====== */
