@@ -1,0 +1,21 @@
+/* ====== General ====== */
+
+:root {
+  /* Colors */
+  --brand-beige: hsl(39, 100%, 97%);
+  --brand-green: hsl(170, 100%, 26%);
+  --brand-green-hover: hsl(170, 100%, 14%);
+  --brand-green-light: hsl(180, 14%, 97%);
+  --brand-green-medium: hsl(152, 23%, 89%);
+  --gray-headline: hsl(210, 11%, 15%);
+  --gray-paragraph: hsl(210, 9%, 31%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* ====== Nav ====== */
+
+/* ====== Header ====== */
+
+/* ====== Main ====== */
+
+/* ====== Footer ====== */
