@@ -12,6 +12,14 @@
   --white: hsl(0, 0%, 100%);
 
   font-size: 62.5%; /* 1rem = 10px */
+
+  --nav-height: 7.2rem;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -31,7 +39,45 @@ h6 {
   font-weight: bold;
 }
 
+.wrapper {
+  width: 37.5rem;
+
+  padding-inline: 2.4rem;
+  margin-inline: auto;
+}
+
 /* ====== Nav ====== */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  height: var(--nav-height);
+
+  display: flex;
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav.scroll {
+  width: 100vw;
+
+  background-color: var(--brand-green);
+}
+
+nav.scroll svg:nth-child(1) path {
+  fill: var(--white);
+}
+
+nav.scroll svg:nth-child(2) path {
+  stroke: var(--white);
+}
 
 /* ====== Header ====== */
 
@@ -43,17 +89,14 @@ header::before {
   left: 0;
   z-index: -1;
 
-  width: 100vw;
-  height: 108rem;
+  width: 100%;
+  height: calc(108rem + var(--nav-height));
 
   background-color: var(--brand-green-medium);
 }
 
 header {
-  width: 37.5rem;
-
-  margin-inline: auto;
-  margin-top: 4.1rem;
+  margin-top: calc(4.1rem + var(--nav-height));
 }
 
 header h4 {
@@ -83,7 +126,7 @@ header p {
 
 header button {
   width: 26.3rem;
-  height: 5.6rem;
+  height: 6.2rem;
 
   margin-inline: auto;
   margin-bottom: 6rem;
