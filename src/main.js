@@ -16,3 +16,17 @@ const openMenu = () => {
 const closeMenu = () => {
   document.body.classList.remove(MENU_EXPANDED)
 }
+
+const optionsScrollReveal = {
+  origin: 'top',
+  distance: '30px',
+  duration: 600
+}
+
+ScrollReveal(optionsScrollReveal).reveal(`
+  #home,
+  #home img,
+  #home .stats,
+  #services,
+  #services header,
+  #services .card`)

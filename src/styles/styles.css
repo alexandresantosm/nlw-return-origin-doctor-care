@@ -73,9 +73,10 @@ section {
 nav {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
 
+  z-index: 100;
+
+  width: 100vw;
   height: var(--nav-height);
 
   display: flex;
@@ -101,12 +102,10 @@ nav button:focus {
 }
 
 nav.scroll {
-  width: 100vw;
-
   background-color: var(--brand-green);
 }
 
-nav.scroll svg:nth-child(1) path {
+nav.scroll .logo path {
   fill: var(--white);
 }
 
@@ -121,7 +120,7 @@ body.menu-expanded {
 }
 
 body.menu-expanded > :not(nav) {
-  display: none;
+  visibility: hidden;
 }
 
 body.menu-expanded .logo,
@@ -165,10 +164,6 @@ body.menu-expanded .menu {
   transition: transform 300ms;
 
   transform: translateY(0);
-}
-
-body.menu-expanded nav {
-  position: relative;
 }
 
 .menu {
@@ -216,7 +211,7 @@ body.menu-expanded nav {
   gap: 3.2rem;
 }
 
-/* ====== Header ====== */
+/* ====== Home ====== */
 
 #home::before {
   display: block;
@@ -330,6 +325,8 @@ body.menu-expanded nav {
 
 /* ====== Main ====== */
 
+/* = Services Section = */
+
 #services header {
   margin-bottom: 6rem;
 }
@@ -381,5 +378,7 @@ body.menu-expanded nav {
 
   color: var(--gray-paragraph);
 }
+
+/* = About Section = */
 
 /* ====== Footer ====== */
