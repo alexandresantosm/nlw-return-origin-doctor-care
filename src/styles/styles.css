@@ -28,6 +28,8 @@ body {
   font-size: 1.6rem;
 
   text-align: center;
+
+  overflow: overlay;
 }
 
 h1,
@@ -37,6 +39,16 @@ h4,
 h5,
 h6 {
   font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  transition: filter 0.2s;
+}
+
+a:hover,
+a:focus {
+  filter: brightness(0.8);
 }
 
 .wrapper {
@@ -65,6 +77,19 @@ nav .wrapper {
   justify-content: space-between;
 }
 
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  transition: filter 0.2s;
+}
+
+nav button:hover,
+nav button:focus {
+  filter: brightness(0.8);
+}
+
 nav.scroll {
   width: 100vw;
 
@@ -75,8 +100,103 @@ nav.scroll svg:nth-child(1) path {
   fill: var(--white);
 }
 
-nav.scroll svg:nth-child(2) path {
+nav.scroll button path {
   stroke: var(--white);
+}
+
+/* ====== Menu Expanded ====== */
+
+body.menu-expanded {
+  overflow: hidden;
+}
+
+body.menu-expanded > :not(nav) {
+  display: none;
+}
+
+body.menu-expanded .logo,
+body.menu-expanded button {
+  position: relative;
+  z-index: 100;
+}
+
+body.menu-expanded .logo path {
+  fill: var(--white);
+}
+
+body.menu-expanded button path {
+  stroke: var(--white);
+}
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.menu-expanded .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: var(--brand-green);
+
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: var(--nav-height);
+}
+
+body.menu-expanded nav {
+  position: relative;
+}
+
+.menu ul:first-child {
+  padding-top: 6rem;
+  margin-bottom: 4.8rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.menu ul:first-child li a {
+  color: var(--brand-beige);
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+}
+
+.menu .button {
+  display: inline-block;
+
+  height: 5.5rem;
+
+  padding: 1.6rem 3.2rem;
+  margin-bottom: 8rem;
+
+  background-color: var(--white);
+  border-radius: 4rem;
+
+  color: var(--brand-green);
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
 }
 
 /* ====== Header ====== */
