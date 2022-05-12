@@ -268,6 +268,15 @@ body.menu-expanded .menu {
   font-size: 1.8rem;
   text-transform: uppercase;
   text-align: center;
+
+  transition: 0.5s;
+}
+
+.menu .menu-button:hover {
+  filter: none;
+
+  background-color: var(--brand-green-hover);
+  color: var(--white);
 }
 
 .social-links {
@@ -404,15 +413,15 @@ body.menu-expanded .menu {
 
 /* = Contact Section = */
 
-.contact {
+#contact {
   background-color: var(--white);
 }
 
-.contact header {
+#contact header {
   margin-bottom: 3.2rem;
 }
 
-.contact ul {
+#contact ul {
   margin-bottom: 3.2rem;
 
   display: flex;
@@ -420,7 +429,7 @@ body.menu-expanded .menu {
   gap: 1.6rem;
 }
 
-.contact ul li {
+#contact ul li {
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -460,4 +469,25 @@ footer .content p {
 
 footer .content .social-links {
   justify-content: flex-start;
+}
+
+/* ====== Back To Top Button ====== */
+
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 2.5rem;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(150%);
+  transition: 0.5s;
+}
+
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
 }

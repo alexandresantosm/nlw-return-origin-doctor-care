@@ -19,7 +19,7 @@
     />
   </head>
 
-  <body onscroll="onScroll()">
+  <body>
     <nav id="navigation">
       <div class="wrapper">
         <a href="#home" class="logo">
@@ -92,7 +92,7 @@
             </li>
           </ul>
 
-          <a class="menu-button" href="#">Agende sua consulta</a>
+          <a class="menu-button" onclick="closeMenu()" href="#contact">Agende sua consulta</a>
 
           <ul class="social-links">
             <li>
@@ -488,7 +488,7 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section id="contact">
         <div class="wrapper">
           <header>
             <h2>Entre em contato com a gente!</h2>
@@ -726,6 +726,14 @@
         </div>
       </div>
     </footer>
+
+    <a id="backToTopButton" href="#home">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="20" fill="#00856F"/>
+      <path d="M20 27V13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M13 20L20 13L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
 
     <!-- ScrollReveal Lib -->
     <script src="https://unpkg.com/scrollreveal"></script>

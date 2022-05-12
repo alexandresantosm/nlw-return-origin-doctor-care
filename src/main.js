@@ -1,11 +1,25 @@
 const SCROLL = 'scroll'
 const MENU_EXPANDED = 'menu-expanded'
+const BACK_TO_TOP_BUTTON = 'show'
 
-const onScroll = () => {
+function onScroll() {
+  showNavOnScroll()
+  showBackToTopButtonOnScroll()
+}
+
+const showNavOnScroll = () => {
   if (scrollY > 0) {
     navigation.classList.add(SCROLL)
   } else {
     navigation.classList.remove(SCROLL)
+  }
+}
+
+const showBackToTopButtonOnScroll = () => {
+  if (scrollY > 500) {
+    backToTopButton.classList.add(BACK_TO_TOP_BUTTON)
+  } else {
+    backToTopButton.classList.remove(BACK_TO_TOP_BUTTON)
   }
 }
 
@@ -40,11 +54,14 @@ ScrollReveal(optionsScrollReveal).reveal(`
   #about .content,
   #about .content p,
   #about .content img,
-  .contact,
-  .contact header,
-  .contact header h2,
-  .contact .content,
-  .contact .content ul,
-  .contact .content a,
-  .contact .content img
+  #contact,
+  #contact header,
+  #contact header h2,
+  #contact .content,
+  #contact .content ul,
+  #contact .content a,
+  #contact .content img
   `)
+
+window.addEventListener('scroll', onScroll)
+onScroll()
