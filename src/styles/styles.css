@@ -116,6 +116,7 @@ section header h2 {
 }
 
 section .content p {
+  font-weight: 400;
   font-size: 1.6rem;
   line-height: 150%;
 
@@ -426,3 +427,37 @@ body.menu-expanded .menu {
 }
 
 /* ====== Footer ====== */
+
+footer {
+  padding-block: 6rem;
+
+  background-color: var(--brand-green);
+
+  color: var(--brand-beige);
+  text-align: left;
+}
+
+footer header {
+  margin-bottom: 2.4rem;
+}
+
+footer .logo svg {
+  width: 23.6rem;
+  height: 3.1rem;
+}
+
+footer .logo path {
+  fill: var(--white);
+}
+
+footer .content p {
+  margin-bottom: 3.2rem;
+
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+footer .content .social-links {
+  justify-content: flex-start;
+}
