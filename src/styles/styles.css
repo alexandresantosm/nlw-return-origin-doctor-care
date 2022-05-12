@@ -2,11 +2,14 @@
 
 :root {
   /* Colors */
-  --brand-beige: hsl(39, 100%, 97%);
-  --brand-green: hsl(170, 100%, 26%);
-  --brand-green-hover: hsl(170, 100%, 14%);
-  --brand-green-light: hsl(180, 14%, 97%);
-  --brand-green-medium: hsl(152, 23%, 89%);
+
+  --hue: 590;
+
+  --brand-beige: hsl(calc(var(--hue) - 131), 100%, 97%); /* 39 */
+  --brand-green: hsl(var(--hue), 100%, 26%); /* 170 */
+  --brand-green-hover: hsl(var(--hue), 100%, 14%); /* 170 */
+  --brand-green-light: hsl(calc(var(--hue) + 10), 14%, 97%); /* 180 */
+  --brand-green-medium: hsl(calc(var(--hue) - 22), 23%, 89%); /* 148 */
   --gray-headline: hsl(210, 11%, 15%);
   --gray-paragraph: hsl(210, 9%, 31%);
   --white: hsl(0, 0%, 100%);
@@ -77,14 +80,13 @@ a.button {
   align-items: center;
   justify-content: center;
   gap: 1.6rem;
-}
 
-a.button {
   filter: none;
   transition: background-color 0.5s;
 }
 
-a.button:hover {
+a.button:hover,
+a.button:focus {
   background-color: var(--brand-green-hover);
 }
 
@@ -134,6 +136,39 @@ img {
   max-width: 100%;
 }
 
+/* ====== Custom Styles ====== */
+
+#navigation .logo path[fill*='#00856F'],
+#backToTopButton circle {
+  fill: var(--brand-green);
+}
+
+body.menu-expanded #navigation .logo path,
+#navigation.scroll .logo path {
+  fill: var(--white);
+}
+
+#navigation.scroll .logo path[stroke*='#00856F'] {
+  stroke: var(--white);
+}
+
+button.open-menu path[stroke*='#00856F'],
+#contact li path {
+  stroke: var(--brand-green);
+}
+
+#navigation.scroll button.open-menu path[stroke*='#00856F'] {
+  stroke: var(--white);
+}
+
+#services .card circle {
+  fill: var(--brand-green-medium);
+}
+
+#services .card path {
+  stroke: var(--brand-green);
+}
+
 /* ====== Nav ====== */
 
 nav {
@@ -169,14 +204,6 @@ nav button:focus {
 
 nav.scroll {
   background-color: var(--brand-green);
-}
-
-nav.scroll .logo path {
-  fill: var(--white);
-}
-
-nav.scroll button path {
-  stroke: var(--white);
 }
 
 /* ====== Menu Expanded ====== */
