@@ -61,11 +61,45 @@ section {
   padding-block: 10rem;
 }
 
+section header h4 {
+  margin-bottom: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  color: var(--brand-green);
+  text-transform: uppercase;
+}
+
+section header h1 {
+  margin-bottom: 2.4rem;
+
+  color: var(--gray-headline);
+  font-size: 3.4rem;
+  line-height: 130%;
+}
+
+section header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+  color: var(--gray-headline);
+}
+
+section .content p {
+  font-size: 1.6rem;
+  line-height: 150%;
+
+  color: var(--gray-paragraph);
+}
+
 .wrapper {
   width: 37.5rem;
 
   padding-inline: 2.4rem;
   margin-inline: auto;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* ====== Nav ====== */
@@ -233,27 +267,12 @@ body.menu-expanded .menu {
 
 #home h4 {
   margin-bottom: 1.6rem;
-
-  color: var(--brand-green);
-  font-size: 1.4rem;
-  line-height: 150%;
-}
-
-#home h1 {
-  margin-bottom: 2.4rem;
-
-  color: var(--gray-headline);
-  font-size: 3.4rem;
-  line-height: 130%;
 }
 
 #home p {
   margin-bottom: 3.2rem;
 
-  color: var(--gray-paragraph);
   font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 150%;
 }
 
 #home button {
@@ -327,25 +346,8 @@ body.menu-expanded .menu {
 
 /* = Services Section = */
 
-#services header {
-  margin-bottom: 6rem;
-}
-
-#services header h4 {
-  margin-bottom: 1.6rem;
-
-  font-size: 1.4rem;
-  line-height: 150%;
-  letter-spacing: 0.08rem;
-  color: var(--brand-green);
-
-  text-transform: uppercase;
-}
-
 #services header h2 {
-  font-size: 3rem;
-  line-height: 3.9rem;
-  color: var(--gray-headline);
+  margin-bottom: 6rem;
 }
 
 #services .cards {
@@ -372,13 +374,18 @@ body.menu-expanded .menu {
   color: var(--gray-headline);
 }
 
-#services .card p {
-  font-size: 1.6rem;
-  line-height: 150%;
+/* = About Section = */
 
-  color: var(--gray-paragraph);
+#about {
+  text-align: left;
 }
 
-/* = About Section = */
+#about header h2 {
+  margin-bottom: 2.4rem;
+}
+
+#about .content p {
+  margin-bottom: 6rem;
+}
 
 /* ====== Footer ====== */

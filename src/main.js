@@ -25,8 +25,19 @@ const optionsScrollReveal = {
 
 ScrollReveal(optionsScrollReveal).reveal(`
   #home,
+  #home header,
+  #home header h4,
+  #home header h1,
+  #home header p,
   #home img,
   #home .stats,
   #services,
   #services header,
-  #services .card`)
+  #services .card,
+  #about,
+  #about header h4,
+  #about header h2,
+  #about .content,
+  #about .content p,
+  #about .content img
+  `)
