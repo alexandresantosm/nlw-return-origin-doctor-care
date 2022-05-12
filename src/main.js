@@ -39,5 +39,12 @@ ScrollReveal(optionsScrollReveal).reveal(`
   #about header h2,
   #about .content,
   #about .content p,
-  #about .content img
+  #about .content img,
+  .contact,
+  .contact header,
+  .contact header h2,
+  .contact .content,
+  .contact .content ul,
+  .contact .content a,
+  .contact .content img
   `)
